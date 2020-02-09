@@ -1,0 +1,30 @@
+<% include helper/header %>
+
+<div class="container">
+    <div class="row">
+        <!--FORM-->
+        <div class="col-md-5 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/<%= task._id %>" method="post">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="title" placeholder="Inisial Kamu ?"
+                            required minlength="2" maxlength="4">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="description"
+                            placeholder="apa Sekolah Menengah Kamu !!" required minlength="2" maxlength="3">
+                            </input>
+                        </div>
+                        <button class="btn btn-primary" type="submit">
+                            Update
+                        </button>
+                        <a href="/datanya" class="btn btn-warning">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include helper/footer %>
